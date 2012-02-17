@@ -1,0 +1,14 @@
+Running / compiling the app
+
+You need to install CoffeeScript first (via Node Package Manager, which means that you also need to install Node.js first).
+
+While developing, you can run the following command inside the src/ folder:
+
+coffee --bare --lint -o js/ -cw coffee/
+
+--bare: removes the function safety wrapper
+--lint: uses jslint (you need to install jslint separately)
+-o: output in the js/ folder
+-c: compile
+-w watch the coffee/ folder
+

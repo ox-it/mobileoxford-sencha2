@@ -14,5 +14,8 @@ FileETag None
 
 Sencha Touch library is hosted outside the application, you can use the following directive in your vhost configuration:
 
-Alias /sencha-touch /home/martin/Projects/sencha-touch
+    Alias /sencha-touch /home/martin/Projects/sencha-touch
 
+Remove the js/ folder level:
+
+    Alias /app /home/molly/Projects/mobileoxford-sencha2/src/js/app
