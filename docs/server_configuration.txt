@@ -6,6 +6,8 @@ AddType text/cache-manifest .manifest
 
 Dear developer, in order to be able to debug offline caching issues correctly, you should enable the "expires" module and set on your vhost conf file:
 
-ExpiresActive On
-ExpiresDefault "access"
-
+Header set Expires "Thu, 19 Nov 1981 08:52:00 GM"
+Header set Cache-Control "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+Header set Pragma "no-cache"
+Header unset ETag
+FileETag None
