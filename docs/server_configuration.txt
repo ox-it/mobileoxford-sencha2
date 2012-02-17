@@ -11,3 +11,8 @@ Header set Cache-Control "no-store, no-cache, must-revalidate, post-check=0, pre
 Header set Pragma "no-cache"
 Header unset ETag
 FileETag None
+
+Sencha Touch library is hosted outside the application, you can use the following directive in your vhost configuration:
+
+Alias /sencha-touch /home/martin/Projects/sencha-touch
+
