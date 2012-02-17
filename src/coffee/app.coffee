@@ -7,6 +7,6 @@ Ext.application
     controllers: []
     stores: []
     models: []
-    views: []
+    views: ["applist",]
     appFolder: "app"
     profiles: ["phone", "tablet"]
