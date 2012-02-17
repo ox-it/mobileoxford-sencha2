@@ -1,0 +1,5 @@
+Theming is done with SASS/Compass.
+
+In the folder src/resources/, run "compass compile" to update CSS.
+
+Note: you need to install Compass.
