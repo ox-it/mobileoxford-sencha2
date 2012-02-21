@@ -50,9 +50,11 @@ In order to be able to debug offline caching issues correctly, you should enable
 ### Aliasing
 
 Sencha touch library
+
     Alias /sencha-touch /location_of_your_sencha_touch
 
 The application
+    
     Alias /app /.../mobileoxford-sencha2/src/js/app
 
 
