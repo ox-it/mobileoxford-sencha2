@@ -26,6 +26,23 @@ this will install node.js and also the node package manager.
 
 This will install coffee script globally. 
 
+## Running / compiling the app
+
+You need to install CoffeeScript first (via Node Package Manager, which means that you also need to install Node.js first).
+
+While developing, you can run the following command inside the src/ folder:
+
+    coffee --bare --lint -o js/ -cw coffee/
+
+--bare: removes the function safety wrapper
+--lint: uses jslint (you need to install jslint separately)
+-o: output in the js/ folder
+-c: compile
+-w watch the coffee/ folder
+
+
+
+
 ### Sencha touch 2 library
 
 Download and extract the sencha touch 2 library to a folder of your choice. 
