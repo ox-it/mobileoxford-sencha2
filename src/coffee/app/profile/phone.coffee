@@ -10,4 +10,4 @@ Ext.define 'MobileOxford.profile.phone',
         #return Ext.os.is.phone;
 
     launch: ->
-        Ext.create('MobileOxford.view.phone.home')
+        Ext.create 'MobileOxford.view.phone.viewport'

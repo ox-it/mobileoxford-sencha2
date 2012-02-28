@@ -3,10 +3,10 @@ Ext.Loader.setConfig
     paths: { 'MobileOxford': 'app', }
 
 Ext.application
-    name: "MobileOxford"
+    name: 'MobileOxford'
     controllers: ['webcams']
     stores: ['webcams',]
     models: ['webcam',]
-    views: ["applist", 'webcams']
-    appFolder: "app"
-    profiles: ["phone", "tablet"]
+    views: ['applist', 'dateriverbar', 'webcams']
+    appFolder: 'app'
+    profiles: ['phone', 'tablet']
