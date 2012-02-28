@@ -4,9 +4,9 @@ Ext.Loader.setConfig
 
 Ext.application
     name: "MobileOxford"
-    controllers: []
-    stores: []
-    models: []
-    views: ["applist",]
+    controllers: ['webcams']
+    stores: ['webcams',]
+    models: ['webcam',]
+    views: ["applist", 'webcams']
     appFolder: "app"
     profiles: ["phone", "tablet"]
