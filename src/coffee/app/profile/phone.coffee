@@ -6,8 +6,8 @@ Ext.define 'MobileOxford.profile.phone',
         controllers: ['home',]
 
     isActive: ->
-        return true;
+        return true
         #return Ext.os.is.phone;
 
     launch: ->
-        Ext.create('MobileOxford.view.phone.home');
+        Ext.create('MobileOxford.view.phone.home')

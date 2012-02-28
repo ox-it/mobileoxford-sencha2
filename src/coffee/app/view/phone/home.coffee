@@ -41,7 +41,7 @@ Ext.define 'MobileOxford.view.phone.home',
                             {
                                 xtype: 'spacer'
                             }
-                            {   
+                            {
                                 html: 'Isis OK, Godstow OK'
                             }
                         ]
