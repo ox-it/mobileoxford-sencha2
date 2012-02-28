@@ -8,6 +8,7 @@ Requirements
 
 * Sencha touch 2 library
 * Coffee script (thus npm and node.js)
+* SASS (styling)
 
 ###  Coffee script
 
