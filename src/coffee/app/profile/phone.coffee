@@ -4,6 +4,7 @@ Ext.define 'MobileOxford.profile.phone',
         name: 'Phone'
         namespace: 'phone'
         controllers: ['home',]
+        views: ['viewport', ]
 
     isActive: ->
         return true

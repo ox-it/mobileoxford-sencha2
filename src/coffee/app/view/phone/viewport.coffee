@@ -38,6 +38,7 @@ Ext.define 'MobileOxford.view.phone.viewport',
                     }
                     {
                         xtype: 'applist'
+                        id: 'appList'
                         flex: 12
                     }
                 ]

@@ -1,13 +1,13 @@
 Ext.define 'MobileOxford.controller.home',
     extend: 'Ext.app.Controller'
+
     config:
+        views: ['viewport', 'applist',]
         refs:
-            list: '#appList'
-        control:
-            list:
+            appList: 'applist'
+            mainNav: '#mainNav'
+            mainPanel: '#mainPanel'
+        listeners:
+            appList:
                 itemtap: 'showApp'
 
-    showApp: (list, index, item, evt) ->
-        path = list.getStore().getAt(index).get('path')
-        console.log("redirect to app #{ path }")
-        @redirectTo(path)

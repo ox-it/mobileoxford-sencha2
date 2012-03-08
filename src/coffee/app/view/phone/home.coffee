@@ -1,5 +1,5 @@
 Ext.define 'MobileOxford.view.phone.home',
-    extend: 'Ext.Panel'
+    extend: 'MobileOxford.view.home'
     config:
         fullscreen: true
         layout:

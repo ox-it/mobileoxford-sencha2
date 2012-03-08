@@ -1,6 +1,9 @@
 Ext.define 'MobileOxford.controller.webcams',
     extend: 'Ext.app.Controller'
     config:
+        refs:
+            mainNav: '#mainNav'
+            mainPanel: '#mainPanel'
         routes:
             'webcams': 'showWebcams'
             'webcams/:id': 'showWebcam'
@@ -11,12 +14,15 @@ Ext.define 'MobileOxford.controller.webcams',
         action.resume()
 
     showWebcams: ->
-        #Ext.create 'MobileOxford.view.webcams'
-        Ext.Viewport.add {xtype: 'webcams'}
+        console.log Ext.Viewport.add {xtype: 'webcams'}
+        #@getMainPanel().add {xtype: 'webcams'}
+        #@getMainPanel.removeAll true, true
+        #list = @getMainPanel().add {xtype: 'webcams'}
+        #@getMainPanel().setActiveItem list
 
     showWebcam: (id) ->
         Ext.Viewport.setMasked {message: "Wait!", xtype: 'loadmask'}
-        url = 'http://m.ox.ac.uk/webcams/' + webcam + '/'
+        url = 'http://m.ox.ac.uk/webcams/' + id + '/'
         Ext.data.JsonP.request {
             url: url
             callbackKey: 'callback'
@@ -32,10 +38,12 @@ Ext.define 'MobileOxford.controller.webcams',
         if result.eis?
             src = result.eis._url
             webcam = {}
-            webcam.url = 'http://m.ox.ac.uk' . result.eis._url
+            webcam.url = 'http://m.ox.ac.uk' + result.eis._url
             webcam.description = result.description
             webcam.credit = result.credit
-            @getViewport.push webcam
+            @getMainPanel().add {xtype: 'webcam'}
+            Ext.Viewport.setMasked false
+            #@getViewport.push webcam
         else
             @onWebcamFailure result
 
