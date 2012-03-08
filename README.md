@@ -76,4 +76,7 @@ The application
     Alias /app /.../mobileoxford-sencha2/src/js/app
 
 
+### Mobile Oxford application
+
+The application is ready to support multiple profiles (e.g. phone, tablet), but we currently force the phone profile for every device.
 
