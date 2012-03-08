@@ -80,3 +80,13 @@ The application
 
 The application is ready to support multiple profiles (e.g. phone, tablet), but we currently force the phone profile for every device.
 
+## Conventions
+
+One controller per app.
+
+Each app should define a "main view" (root view).
+
+Each view has to have a route; method for displaying each view should be named as show[view's name] (e.g. showWebcams); this method should be able to restore the state of the view.
+
+Methods to handle events should be named as on[Component][Event] (e.g. onWebcamsListItemTap).
+
