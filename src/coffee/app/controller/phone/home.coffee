@@ -7,7 +7,7 @@ Ext.define 'MobileOxford.controller.phone.home',
             appList: '#applist'
             mainNav: '#mainNav'
             mainPanel: '#mainPanel'
-        listeners:
+        control:
             appList:
                 itemtap: 'showApp'
 

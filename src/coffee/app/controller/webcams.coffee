@@ -4,6 +4,11 @@ Ext.define 'MobileOxford.controller.webcams',
         refs:
             mainNav: '#mainNav'
             mainPanel: '#mainPanel'
+            webcamsList: '#webcamsList'
+            viewport: '#viewport'
+        control:
+            webcamsList:
+                itemtap: 'onWebcamsListItemTap'
         routes:
             'webcams': 'showWebcams'
             'webcams/:id': 'showWebcam'
@@ -11,15 +16,16 @@ Ext.define 'MobileOxford.controller.webcams',
             showWebcams: 'loadWebcams'
 
     loadWebcams: (action) ->
+        # should ensure that webcams are loaded from mox
         action.resume()
 
-    showWebcams: ->
-        console.log Ext.Viewport.add {xtype: 'webcams'}
-        #@getMainPanel().add {xtype: 'webcams'}
-        #@getMainPanel.removeAll true, true
-        #list = @getMainPanel().add {xtype: 'webcams'}
-        #@getMainPanel().setActiveItem list
+    onWebcamsListItemTap: (list, index, item, record, evt, options) ->
+        @redirectTo 'webcams/' + record.data.slug
 
+    showWebcams: ->
+        view = Ext.create 'MobileOxford.view.webcams'
+        @getViewport().setActiveItem view
+ 
     showWebcam: (id) ->
         Ext.Viewport.setMasked {message: "Wait!", xtype: 'loadmask'}
         url = 'http://m.ox.ac.uk/webcams/' + id + '/'
@@ -39,11 +45,16 @@ Ext.define 'MobileOxford.controller.webcams',
             src = result.eis._url
             webcam = {}
             webcam.url = 'http://m.ox.ac.uk' + result.eis._url
-            webcam.description = result.description
-            webcam.credit = result.credit
-            @getMainPanel().add {xtype: 'webcam'}
+            webcam.description = result.webcam.description
+            webcam.credit = result.webcam.credit
+           
+            console.log webcam
+
+            view = Ext.create 'MobileOxford.view.webcam'
+            view.config.data = webcam
+            @getViewport().setActiveItem view
+
             Ext.Viewport.setMasked false
-            #@getViewport.push webcam
         else
             @onWebcamFailure result
 

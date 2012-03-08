@@ -4,6 +4,7 @@
 
 Ext.define 'MobileOxford.view.phone.viewport',
     extend: 'MobileOxford.view.viewport'
+    id: 'viewport'
     config:
         layout: 'card'
         fullscreen: true
