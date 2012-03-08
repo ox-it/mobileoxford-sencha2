@@ -7,6 +7,7 @@ Ext.define 'MobileOxford.profile.phone',
         views: ['viewport', ]
 
     isActive: ->
+        # we only use the phone profile actually
         return true
         #return Ext.os.is.phone;
 

@@ -6,7 +6,8 @@ Ext.define 'MobileOxford.profile.tablet',
         controllers: []
 
     isActive: ->
-        return false;
+        # not used atm
+        return false
 
     launch: ->
-        Ext.create('MobileOxford.view.phone.home');
+        Ext.create('MobileOxford.view.phone.home')
