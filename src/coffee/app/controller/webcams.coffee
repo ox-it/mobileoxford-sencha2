@@ -48,8 +48,6 @@ Ext.define 'MobileOxford.controller.webcams',
             webcam.description = result.webcam.description
             webcam.credit = result.webcam.credit
            
-            console.log webcam
-
             view = Ext.create 'MobileOxford.view.webcam'
             view.config.data = webcam
             @getViewport().setActiveItem view

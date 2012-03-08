@@ -1,23 +1,27 @@
 Ext.define 'MobileOxford.controller.phone.home',
     extend: 'MobileOxford.controller.home'
-
     config:
         views: ['viewport', 'applist']
         refs:
-            appList: '#applist'
+            appList: '#appList'
             mainNav: '#mainNav'
             mainPanel: '#mainPanel'
+            viewport: '#viewport'
         control:
             appList:
-                itemtap: 'showApp'
+                itemtap: 'onAppListItemTap'
+        routes:
+            '': 'showHomePage'
 
-    showApp: (list, index, item, record, evt, options) ->
-        console.log 'redirecting to ' + record.path
-        @redirectTo record.path
+    onAppListItemTap: (list, index, item, record, evt, options) ->
+        console.log 'redirecting...'
+        console.log 'redirecting to ' + record.data.path
+        @redirectTo record.data.path
 
-    init: () ->
-        console.log Ext.ComponentQuery.query('#appList')
-        console.log Ext.ComponentQuery.query('#mainNav')
-        console.log @getMainNav()
-        console.log @getMainPanel()
+    showHomePage: ->
         console.log @getAppList()
+        console.log @getMainNav()
+        console.log @getViewport()
+        view = Ext.create 'MobileOxford.view.phone.home'
+        @getViewport().setActiveItem view
+

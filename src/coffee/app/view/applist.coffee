@@ -10,7 +10,7 @@ Ext.define 'MobileOxford.view.applist',
                     fields: ['name', 'path']
                     data: [
                         { name: 'Webcams', path: 'webcams' }
-                        { name: 'Transport', path: 'transport' }
+                        { name: 'Transport', path: 'transports' }
                         { name: 'Library', path: 'library' }
                     ]
                 itemTpl: '{name}'
