@@ -1,5 +1,11 @@
 Ext.define 'MobileOxford.view.phone.home',
     extend: 'MobileOxford.view.home'
+    xtype: 'home'
+    requires: [
+        'MobileOxford.view.applist',
+        'MobileOxford.view.dateriverbar',
+        'Ext.TitleBar',
+    ]
     config:
         fullscreen: true
         layout:
@@ -32,19 +38,7 @@ Ext.define 'MobileOxford.view.phone.home',
                 layout: 'vbox'
                 items: [
                     {
-                        xtype: 'container'
-                        layout: 'hbox'
-                        items: [
-                            {
-                                html: 'Friday, 5th week, Hilary 2012 (17 Feb)'
-                            }
-                            {
-                                xtype: 'spacer'
-                            }
-                            {
-                                html: 'Isis OK, Godstow OK'
-                            }
-                        ]
+                        xtype: 'dateriverbar'
                         flex: 1
                     }
                     {

@@ -4,45 +4,16 @@
 
 Ext.define 'MobileOxford.view.phone.viewport',
     extend: 'MobileOxford.view.viewport'
+    requires: [
+        'MobileOxford.view.home',
+    ]
     id: 'viewport'
     config:
         layout: 'card'
         fullscreen: true
         items: [
             {
-                xtype: 'titlebar'
-                docked: 'top'
-                id: 'mainNav'
-                items: [
-                    {
-                        html: 'MOX'
-                        align: 'left'
-                    }
-                    {
-                        text: 'Favs'
-                        align: 'right'
-                    }
-                    {
-                        text: 'Search'
-                        align: 'right'
-                    }
-                ]
-            },
-            {
-                xtype: 'container'
-                layout: 'vbox'
-                id: 'mainPanel'
-                items: [
-                    {
-                        xtype: 'dateriverbar'
-                        flex: 1
-                    }
-                    {
-                        xtype: 'applist'
-                        id: 'appList'
-                        flex: 12
-                    }
-                ]
+                xtype: 'home'
             }
         ]
 

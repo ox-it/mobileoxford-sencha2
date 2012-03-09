@@ -1,5 +1,8 @@
 Ext.define 'MobileOxford.view.applist',
     extend: 'Ext.Panel'
+    requires: [
+        'Ext.dataview.List',
+    ]
     xtype: 'applist'
     config:
         layout: 'fit'

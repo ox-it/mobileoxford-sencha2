@@ -7,6 +7,6 @@ Ext.application
     controllers: ['home', 'webcams', 'transports',]
     stores: ['webcams',]
     models: ['webcam',]
-    views: ['applist', 'dateriverbar', 'webcams', 'viewport', 'home']
+    views: ['webcams', 'viewport', 'home']
     appFolder: 'app'
     profiles: ['phone', 'tablet']
