@@ -9,6 +9,7 @@ Ext.define 'MobileOxford.view.applist',
         items: [
             {
                 xtype: 'list'
+                id: 'appList'
                 store:
                     fields: ['name', 'path']
                     data: [

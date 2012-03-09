@@ -17,6 +17,7 @@ Ext.define 'MobileOxford.view.phone.home',
         items: [
             {
                 xtype: 'titlebar'
+                id: 'mainNav'
                 docked: 'top'
                 items: [
                     {
@@ -43,7 +44,6 @@ Ext.define 'MobileOxford.view.phone.home',
                     }
                     {
                         xtype: 'applist'
-                        id: 'appList'
                         flex: 12
                     }
 
