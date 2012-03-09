@@ -7,13 +7,20 @@ Ext.define 'MobileOxford.controller.transports',
             'transports/train-station': 'showTrainStation'
             'transports/bus': 'showBuses'
             'transports/bus/:stop': 'showBusStop'
+        refs:
+            viewport: '#viewport'
+            transportsList: 'transportslist'
+        control:
+            transportsList:
+                itemtap: 'onMeansListItemTap'
 
 
     onMeansListItemTap: (list, index, item, record, evt, options) ->
-        @redirectTo 'transports/' + record.data.slug
+        @redirectTo record.data.slug
 
     showTransportMeans: ->
-        console.log 'TODO'
+        view = Ext.create 'MobileOxford.view.transportslist'
+        @getViewport().setActiveItem view
 
     showParkAndRides: ->
         console.log 'TODO'

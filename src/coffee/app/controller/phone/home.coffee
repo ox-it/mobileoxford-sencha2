@@ -14,8 +14,6 @@ Ext.define 'MobileOxford.controller.phone.home',
             '': 'showHomePage'
 
     onAppListItemTap: (list, index, item, record, evt, options) ->
-        console.log 'redirecting...'
-        console.log 'redirecting to ' + record.data.path
         @redirectTo record.data.path
 
     showHomePage: ->
