@@ -18,4 +18,4 @@ Ext.define 'MobileOxford.view.transportslist',
                     ]
                 itemTpl: '{name}'
             }
-            ]
+        ]
