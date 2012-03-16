@@ -1,5 +1,5 @@
 Ext.define 'MobileOxford.view.webcams',
-    extend: 'Ext.Panel'
+    extend: 'Ext.Container'
     xtype: 'webcams'
     title: 'Webcams'
     config:
