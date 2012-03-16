@@ -2,6 +2,22 @@
 # Each controller should manage navigation bar and 
 # main panel using their IDs
 
+#Ext.define 'MobileOxford.view.phone.viewport',
+#    extend: 'MobileOxford.view.viewport'
+#    requires: [
+#        'MobileOxford.view.home',
+#    ]
+#    id: 'viewport'
+#    config:
+#        layout: 'card'
+#        fullscreen: true
+#        items: [
+#            {
+#                xtype: 'home'
+#            }
+#        ]
+#
+
 Ext.define 'MobileOxford.view.phone.viewport',
     extend: 'MobileOxford.view.viewport'
     requires: [
@@ -9,11 +25,35 @@ Ext.define 'MobileOxford.view.phone.viewport',
     ]
     id: 'viewport'
     config:
-        layout: 'card'
+        layout:
+            type: 'card'
+            animation:
+                type: 'slide'
+                direction: 'left'
+                duration: 250
         fullscreen: true
         items: [
-            {
-                xtype: 'home'
-            }
-        ]
+                    {
+                        xtype: 'titlebar'
+                        id: 'mainNav'
+                        docked: 'top'
+                        items: [
+                            {
+                                html: 'MOX'
+                                align: 'left'
+                            }
+                            {
+                                text: 'Favs'
+                                align: 'right'
+                            }
+                            {
+                                text: 'Search'
+                                align: 'right'
+                            }
+                        ]
+                    }
+                    {
+                        xtype: 'home'
+                    }
+                ]
 

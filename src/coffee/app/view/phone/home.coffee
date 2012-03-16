@@ -8,6 +8,7 @@ Ext.define 'MobileOxford.view.phone.home',
     ]
     config:
         fullscreen: true
+        title: 'Mobile Oxford'
         layout:
             type: 'card'
             animation:
@@ -15,25 +16,25 @@ Ext.define 'MobileOxford.view.phone.home',
                 direction: 'left'
                 duration: 250
         items: [
-            {
-                xtype: 'titlebar'
-                id: 'mainNav'
-                docked: 'top'
-                items: [
-                    {
-                        html: 'MOX'
-                        align: 'left'
-                    }
-                    {
-                        text: 'Favs'
-                        align: 'right'
-                    }
-                    {
-                        text: 'Search'
-                        align: 'right'
-                    }
-                ]
-            }
+            # {
+            #       xtype: 'titlebar'
+            #       id: 'mainNav'
+            #       docked: 'top'
+            #       items: [
+            #           {
+            #               html: 'MOX'
+            #               align: 'left'
+            #           }
+            #           {
+            #               text: 'Favs'
+            #               align: 'right'
+            #           }
+            #           {
+            #               text: 'Search'
+            #               align: 'right'
+            #           }
+            #       ]
+            # }
             {
                 xtype: 'container'
                 layout: 'vbox'

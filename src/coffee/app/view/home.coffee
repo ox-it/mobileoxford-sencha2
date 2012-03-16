@@ -1,3 +1,3 @@
 Ext.define 'MobileOxford.view.home',
-    extend: 'Ext.Panel'
+    extend: 'Ext.Container'
     xtype: 'home'

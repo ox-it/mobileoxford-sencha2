@@ -17,6 +17,7 @@ Ext.define 'MobileOxford.controller.phone.home',
         @redirectTo record.data.path
 
     showHomePage: ->
+        #@getViewport().push { xtype: 'home' }
         view = Ext.create 'MobileOxford.view.phone.home'
         @getViewport().setActiveItem view
 
