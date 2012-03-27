@@ -44,6 +44,8 @@ Ext.define 'MobileOxford.view.phone.viewport',
                             }
                             {
                                 text: 'Favs'
+                                xtype: 'button'
+                                id: 'favsButton'
                                 align: 'right'
                             }
                             {
