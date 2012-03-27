@@ -7,6 +7,7 @@ Now with coffee script!
 Requirements
 
 * Sencha touch 2 library
+* Sencha Touch Charts 2.0 Beta
 * Coffee script (thus npm and node.js)
 * SASS (styling)
 
@@ -49,6 +50,10 @@ While developing, you can run the following command inside the src/ folder:
 Download and extract the sencha touch 2 library to a folder of your choice. 
 Move the files to an appropriate folder of your root web config. By default these are expected to be found at /sencha-touch/ .
 
+### Sencha Touch Charts 2.0 library
+
+Same procedure than for Sencha touch 2 library
+
 ## Apache configuration 
 
 In order to use offline cache, .manifest files need to be served with a special mime type.
@@ -70,6 +75,10 @@ In order to be able to debug offline caching issues correctly, you should enable
 Sencha touch library
 
     Alias /sencha-touch /location_of_your_sencha_touch
+
+Sencha Touch Charts 2.0 library
+
+    Alias /touch-charts /location_of_your_touch_charts
 
 The application
     
