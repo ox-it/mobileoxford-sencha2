@@ -23,7 +23,17 @@ Ext.define 'MobileOxford.controller.transports',
         @getViewport().setActiveItem view
 
     showParkAndRides: ->
-        console.log 'TODO'
+        Ext.Viewport.setMasked {message: 'Wait!', xtype: 'loadmask'}
+        Ext.data.JsonP.request {
+            url: 'http://m.ox.ac.uk/transport/park-and-ride/'
+            callbackKey: 'callback'
+            params:
+                format: 'js'
+            timeout: 2000
+            success: @onParkAndRidesSuccess
+            failure: @onParkAndRidesFailure
+            scope: @
+        }
 
     showTrainStation: ->
         console.log 'TODO'
@@ -33,5 +43,28 @@ Ext.define 'MobileOxford.controller.transports',
 
     showBusStop: (stop) ->
         console.log 'TODO'
+
+    onParkAndRidesSuccess: (result) ->
+        if result
+            prs = []
+            for pr in result.park_and_rides
+                p = {}
+                p.name = pr.title
+                p.percentage = pr.metadata.park_and_ride.percentage
+                p.space = pr.metadata.park_and_ride.space
+                p.capacity = pr.metadata.park_and_ride.capacity
+                prs.push p
+            view = Ext.create 'MobileOxford.view.transportspr',
+                data: prs
+            @getViewport().setActiveItem view
+
+            Ext.Viewport.setMasked false
+        else
+            @onParkAndRidesFailure result
+
+    onParkAndRidesFailure: (result) ->
+        alert 'Sorry, an error has occured while retrieving pr status.'
+        @redirectTo 'transports'
+        Ext.Viewport.setMasked false
 
 
