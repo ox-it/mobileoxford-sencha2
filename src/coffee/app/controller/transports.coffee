@@ -51,7 +51,7 @@ Ext.define 'MobileOxford.controller.transports',
                 p = {}
                 p.name = pr.title
                 p.percentage = pr.metadata.park_and_ride.percentage
-                p.space = pr.metadata.park_and_ride.space
+                p.spaces = pr.metadata.park_and_ride.spaces
                 p.capacity = pr.metadata.park_and_ride.capacity
                 prs.push p
             view = Ext.create 'MobileOxford.view.transportspr',
